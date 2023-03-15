@@ -1,0 +1,58 @@
+ROOMS
+ID = 1 
+name = Open Forest
+Description
+You are standing in the middle of a forest. You can see something but are not sure what it is, 
+so you get closer and things become clearer. It is an abandoned mine.   
+exits
+You can go WEST 2
+
+
+ID = 2 
+name = Abandoned Mine.
+Description
+You have entered the mine which is pitch dark, it gets slightly larger as you go in deeper to the west. 
+Strangely you see a faint glow coming from the east.
+exits
+You can go EAST 1 or WEST 3
+
+
+ID = 3 
+name = Beach
+Description
+You see a large beach and you are surprised to find out that there are some tents but no people. The water down
+seems crystal clear which is tempting but there is a sound coming from the east.
+exits
+You can go EAST 2 or DOWN 6
+
+
+ID = 4
+name = Tree House
+Description
+You enter a tree house that has a set of stairs that looks like they are in pretty bad shape 
+however, you ignore the danger and you go in.
+exits
+You can go NORTH 5
+
+
+ID = 5 
+name = Lazy River
+Description
+You have entered an enchanted forest that seems amazing, but as time passes by you realized that it becomes harder
+and harder to move because of the thick bushes that surround you. You see an escape to the west.
+exits
+You can go SOUTH 4 WEST 6
+
+
+ID = 6
+name = Second level
+Description
+
+You have climbed the top of the trees and can see how you find your way home. The scene is amazing and it is almost 
+nightfall, so you make a camp for tonight because tomorrow will be another adventure day.
+exits
+You can go UP 3 or EAST 5
+
+Congratulations!!! You have completed the journey through my maze.
+
+

@@ -1,0 +1,4 @@
+CREATE TABLE Item(itemID int Primary Key not Null, itemName text not null, itemDescription text not null);
+INSERT INTO Item(itemID, itemName, itemDescription) Values(1, 'Torch', 'A guttering torch that sheds a little light');
+INSERT INTO Item(itemID, itemName, itemDescription) Values(2, 'Rusty Sword', 'A rusty sword that looks like it may fall apart when you touch it');
+INSERT INTO Item(itemID, itemName, itemDescription) Values(3, 'Shield', 'A very shiny shield. This looks like something that could really protect you');
