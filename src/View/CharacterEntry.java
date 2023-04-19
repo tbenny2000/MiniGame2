@@ -85,6 +85,7 @@ public class CharacterEntry {
                 for (String direction : exitsObject.getRoomExits()) {
                     if (direction.equalsIgnoreCase(userInput)) {
                         checkWord = true;
+                        break;
                     }
                     if (direction.toLowerCase().startsWith(userInput.toLowerCase(Locale.ROOT))) {
                         checkLetter = true;
@@ -127,6 +128,7 @@ public class CharacterEntry {
                             }
                         }
                     }
+                }
                     if (roomID == 1) {
                         liteObj.updateDB("update player set currentRoom = 2 where playerID = 1");
 
@@ -167,9 +169,9 @@ public class CharacterEntry {
                 System.out.println("Exit");
                 System.out.println();
                 System.out.println("Thank you for playing the Game.");
-                liteObj.close();
-                input.close();
+
             }
+        liteObj.close();
+        input.close();
         }
     }
-}
