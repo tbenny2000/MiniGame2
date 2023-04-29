@@ -24,11 +24,11 @@ public class ItemCommands{
         try {
 
             List<String> itemList = new ArrayList<>();
-            ResultSet itemsFromDB = liteObj.queryDB("Select i.itemDescription from Item i Join PlayerItem pi On i.itemID = pi.itemID " +
+            ResultSet itemsFromDB = liteObj.queryDB("Select i.itemType from Item i Join PlayerItem pi On i.itemID = pi.itemID " +
                     "where pi.playerID = \"" + playerID + "\"");
 
             while (itemsFromDB.next()) {
-                String item = itemsFromDB.getString("itemDescription");
+                String item = itemsFromDB.getString("itemType");
                 itemList.add(item);
             }
             if (itemList.isEmpty()) {
@@ -71,23 +71,65 @@ public class ItemCommands{
     public static void getItem(String userInput, int roomID, SQLiteDB liteObj, int playerID, int itemID) {
 
         try {
-            if ((userInput.equalsIgnoreCase("get torch")
-                    || userInput.equalsIgnoreCase("g torch")) && roomID == 2) {
+            if ((userInput.equalsIgnoreCase("get sword")
+                    || userInput.equalsIgnoreCase("g sword")) && roomID == 4) {
                 liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
                 //liteObj.updateDB("UPDATE ItemRoom SET roomID = 0  WHERE itemID =" + itemID);
-                System.out.println("Torch has been added to your inventory.");
+                System.out.println("SWORD has been added to your inventory.");
 
-            } else if ((userInput.equalsIgnoreCase("get rusty sword")
-                    || userInput.equalsIgnoreCase("g rusty sword")) && roomID == 3) {
+            } else if ((userInput.equalsIgnoreCase("get health potion")
+                    || userInput.equalsIgnoreCase("g health potion")) && roomID == 5) {
                 liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
                 //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
-                System.out.println("Rusty Sword has been added to your inventory ");
+                System.out.println("HEALTH POTION has been added to your inventory ");
 
-            } else if ((userInput.equalsIgnoreCase("get shield")
-                    || userInput.equalsIgnoreCase("g shield")) && roomID == 5) {
+            } else if ((userInput.equalsIgnoreCase("get health potion")
+                    || userInput.equalsIgnoreCase("g health potion")) && roomID == 20) {
                 liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
                 //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
-                System.out.println("Shield has been added to your inventory ");
+                System.out.println("HEALTH POTION has been added to your inventory ");
+
+            } else if ((userInput.equalsIgnoreCase("get health potion")
+                    || userInput.equalsIgnoreCase("g health potion")) && roomID == 26) {
+                liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
+                //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
+                System.out.println("HEALTH POTION has been added to your inventory ");
+
+            } else if ((userInput.equalsIgnoreCase("get scythe")
+                    || userInput.equalsIgnoreCase("g scythe")) && roomID == 7) {
+                liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
+                //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
+                System.out.println("SCYTHE has been added to your inventory ");
+
+            } else if ((userInput.equalsIgnoreCase("get scythe")
+                    || userInput.equalsIgnoreCase("g scythe")) && roomID == 11) {
+                liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
+                //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
+                System.out.println("SCYTHE has been added to your inventory ");
+
+            } else if ((userInput.equalsIgnoreCase("get scythe")
+                    || userInput.equalsIgnoreCase("g scythe")) && roomID == 14) {
+                liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
+                //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
+                System.out.println("SCYTHE has been added to your inventory ");
+
+            } else if ((userInput.equalsIgnoreCase("get club")
+                    || userInput.equalsIgnoreCase("g club")) && roomID == 9) {
+                liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
+                //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
+                System.out.println("CLUB has been added to your inventory ");
+
+            } else if ((userInput.equalsIgnoreCase("get key")
+                    || userInput.equalsIgnoreCase("g key")) && roomID == 12) {
+                liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
+                //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
+                System.out.println("KEY has been added to your inventory ");
+
+            } else if ((userInput.equalsIgnoreCase("get axe")
+                    || userInput.equalsIgnoreCase("g axe")) && roomID == 15) {
+                liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
+                //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
+                System.out.println("AXE has been added to your inventory ");
 
             } else {
                 System.out.println(userInput.substring(userInput.indexOf(" ") + 1).toUpperCase() + " not in room.");
