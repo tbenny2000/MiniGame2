@@ -41,7 +41,7 @@ public class ItemCommands{
         }
     }
 
-    public static void removeItem(String userInput, SQLiteDB liteObj, int playerID) {
+    public static void removeItem(String userInput, int roomID, SQLiteDB liteObj, int playerID) {
 
         String itemName = userInput.substring(userInput.indexOf(" ") + 1).toLowerCase();
         try {
@@ -50,12 +50,15 @@ public class ItemCommands{
 
             if (itemName.equals("torch")) {
                 liteObj.updateDB("Delete From playerItem Where playerID =" + playerID + " and itemID = " + itemID);
+                liteObj.updateDB("UPDATE ItemRoom set roomID =" + roomID + " WHERE itemID =" + itemID);
                 System.out.println("Torch has been removed from your inventory.");
             } else if (itemName.equals("rusty sword")) {
                 liteObj.updateDB("Delete From playerItem Where playerID =" + playerID + " and itemID = " + itemID);
+                liteObj.updateDB("UPDATE ItemRoom set roomID =" + roomID + " WHERE itemID =" + itemID);
                 System.out.println("Rusty Sword has been removed from your inventory.");
             } else if (itemName.equals("shield")) {
                 liteObj.updateDB("Delete From playerItem Where playerID =" + playerID + " and itemID = " + itemID);
+                liteObj.updateDB("UPDATE ItemRoom set roomID =" + roomID + " WHERE itemID =" + itemID);
                 System.out.println("Shield has been removed from your inventory.");
             } else {
                 System.out.println(itemName.toUpperCase() + " not in Inventory.\n");
@@ -71,16 +74,19 @@ public class ItemCommands{
             if ((userInput.equalsIgnoreCase("get torch")
                     || userInput.equalsIgnoreCase("g torch")) && roomID == 2) {
                 liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
+                //liteObj.updateDB("UPDATE ItemRoom SET roomID = 0  WHERE itemID =" + itemID);
                 System.out.println("Torch has been added to your inventory.");
 
             } else if ((userInput.equalsIgnoreCase("get rusty sword")
                     || userInput.equalsIgnoreCase("g rusty sword")) && roomID == 3) {
                 liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
+                //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
                 System.out.println("Rusty Sword has been added to your inventory ");
 
             } else if ((userInput.equalsIgnoreCase("get shield")
                     || userInput.equalsIgnoreCase("g shield")) && roomID == 5) {
                 liteObj.updateDB("INSERT INTO playerItem VALUES(" + playerID + "," + itemID + ")");
+                //liteObj.updateDB("UPDATE ItemRoom set roomID = 0 WHERE itemID =" + itemID);
                 System.out.println("Shield has been added to your inventory ");
 
             } else {

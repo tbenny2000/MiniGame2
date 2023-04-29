@@ -1,58 +1,194 @@
 ROOMS
-ID = 1 
-name = Open Forest
+
+
+ID = 1
+name = The Start
 Description
-You are standing in the middle of a forest. You can see something but are not sure what it is, 
-so you get closer and things become clearer. It is an abandoned mine.   
+You wake from a deep slumber and find yourself in a dark damp place. Suddenly torches around you start to light up the room.
+You look around, and you see four doorways. Who knows what waits for you on the other side.
 exits
-You can go WEST 2
+You can go North 2, South 4, East 3, West 5
 
-
-ID = 2 
-name = Abandoned Mine.
+ID = 2
+name = Cyclops
 Description
-You have entered the mine which is pitch dark, it gets slightly larger as you go in deeper to the west. 
-Strangely you see a faint glow coming from the east.
+You walk into this room, and you hear something... a clawing, growling, and grunting noise. You look and your eyes see a giant cyclops.
+You reach for a weapon but... you do not have a weapon. What do you do? Run or fight with your bare knuckles?
 exits
-You can go EAST 1 or WEST 3
+You can go North 14, South 1, East 7
 
-
-ID = 3 
-name = Beach
+ID = 3
+name = The Gorgon
 Description
-You see a large beach and you are surprised to find out that there are some tents but no people. The water down
-seems crystal clear which is tempting but there is a sound coming from the east.
+In this room, there is a deadly gorgon. One gaze and you are in biiiiig trouble. You must act fast and think quickly! Or you can flee to fight another day...
 exits
-You can go EAST 2 or DOWN 6
-
+You can go South 8, East 15, West 1
 
 ID = 4
-name = Tree House
+name = Item Room
 Description
-You enter a tree house that has a set of stairs that looks like they are in pretty bad shape 
-however, you ignore the danger and you go in.
+In this small room, you see a chest. This chest contains a certain item to help you on your journey. When you open it, you see... a long sword. This sword will be vital for slaying your enemies.
 exits
-You can go NORTH 5
+You can go North 1, South 17, East 8, West 9
 
-
-ID = 5 
-name = Lazy River
+ID = 5
+name = Item Room
 Description
-You have entered an enchanted forest that seems amazing, but as time passes by you realized that it becomes harder
-and harder to move because of the thick bushes that surround you. You see an escape to the west.
+Room Description
 exits
-You can go SOUTH 4 WEST 6
-
+You can North 6, East 1, West 10
 
 ID = 6
-name = Second level
+name = A Surprise
 Description
-
-You have climbed the top of the trees and can see how you find your way home. The scene is amazing and it is almost 
-nightfall, so you make a camp for tonight because tomorrow will be another adventure day.
+You walk into the room ready to fight whatever evil is inside and you see... nothing? There is nothing inside. This is a suitable time to save and/or rest for a good minute.
 exits
-You can go UP 3 or EAST 5
+You can go North 13, South 5
+
+ID = 7
+name = A Demon with a Key
+Description
+A demon is waiting for you, but his magic has you thinking about what is real and what is not. You notice something he’s holding... a scythe! You must defeat him to get the scythe.
+Be careful! Note: a scythe will increase your weapons damage.
+exits
+You can go North 22, West 2
+
+ID = 8
+name = Most Important Room of All Time
+Description
+Walking in this room... OH NO! There’s... there is nothing in here. This is a good place to save the game, get a snack, do some homework, play outside, etc.
+You can go North 3, West 4
+
+ID = 9
+name = Going Down to Sub-Zero
+Description
+You feel cold when you enter this room... is it winter already? No. You are in a frost giant’s domain. Equipped with damaging sub-zero frost breath, earth-shaking stomps, and a giant club. Tread carefully player. Hey that club will get good on you...
+exits
+You can go East 4
+
+ID = 10
+name = A Blank Room
+Description
+There is nothing in here... seems like a good place to rest.
+exits
+You can go East 5, West 18
+
+ID = 11
+name = Banshee Banshee, let me hear you sing
+Description
+You walk in and you suddenly get hit with a huge sound blast. A banshee! You see that she is protecting ascythe!
+You can go North 12, West 19
+
+ID = 12
+name = Giant Orc
+Description
+You walk into the room and are faced with a Giant Orc. You look at it and notice a key hanging off its neck. You believe this is the key that will open the locked door. You prepare for battle.
+exits
+You can go South 11
+
+ID = 13
+name = The Chimera
+Description
+You hear a hissing noise... is it a python? You hear a bleating noise... a giant goat? You hear a roar. A lion? No. A Chimera, a beast with a lion’s body and head, a tail ended up in a snake’s head, and in the middle of the back is a goat’s neck and head. You must defeat each head to kill this dangerous beast.
+exits
+You can go South 6
+
+ID = 14
+name = Erymanthain Boar
+Description
+This huge boar is charging at you. You dodge it at the last second. It’s getting ready to charge at you again. Are you prepared to defend yourself? Defeating this creature will reward you with some scythe.
+exits
+You can go North 21, South 2
+
+ID = 15
+name = The Minotaur
+Description
+You run into a minotaur equipped with his battle axe. That axe can be useful for your quest. Defeat this beast to acquire his axe.
+exits
+You can go South 16, West 3
+
+ID = 16
+name = Rest
+Description
+This is a place of rest... so rest.
+exits
+You can go North 15, East 23
+
+ID = 17
+name = Item Room
+Description
+This is maybe your first resting place; you can save your game and get ready for what you are about to do.
+exits
+You can go North 4, South 25
+
+ID = 18
+name = The Mares of Diomedes
+Description
+You see four horses. You are thinking that you can use them for transportation in your quest. You get close, but then one of the horses tries to bite you. Then you start to notice something... these horses look a little off. You see that they are tethered with iron chains to a bronze manger. Now you know what you are dealing with...these four, magnificent, wild, uncontrollable, man-eating horses are non-other that the Mares of Diomedes. Careful! They bite!
+exits
+You can go North 19, East 10
+
+ID = 19
+name = The Basilisk
+Description
+You see feathers. Is it a bird? No, it is a basilisk, a creature with the body of a snake and the head of a rooster. Cock-a-doodle-doo!
+exits
+You can go South 18, East 11
+
+ID = 20
+name = Item Room
+Description
+You found a health potion, use it at the right time.
+exits
+You can go East 21
+
+ID = 21
+name = Blank Room
+Description
+Another one... best to save the game, restore health, and get your bearings right.
+exits
+You can go South 14, West 20
+
+ID = 22
+name = The Dangerous centaur
+Description
+You hear horse feet... you finally see a man. Wait half of a man, and half horse. A CENTUAR! He’s charging toward you! TO ARMS!
+exits
+You can go South 7, East 23
+
+ID = 23
+name = The Aqrabuamelu
+Description
+A giant scorpion attacks on you. You dodge its fast and poisonous attacks. You noticed something... IT’S HALF MAN, HALF SCORPION. An Aqrabuamelu. Watch out for the tail.
+exits
+You can go North 22, South 24, East 27, West 16
+
+ID = 24
+name = A rest room
+Description
+Best to save the game, restore health, and get your bearings right.
+exits
+You can go East 23, West 25
+
+ID = 25
+name = Eye Monster
+Description
+Eye see you! Eye see everything!” Careful this monster can hypnotize you and make you attack yourself!
+exits
+You can go North 17, East 24, West 26
+
+ID = 26
+name = Health Potion
+Description
+Take the health potion.... you will need it
+exits
+You can go East 25
+
+ID = 27
+name = The Way Home
+Description
+You open the huge door with the key and are surprised by what you see. In front of you is a huge fire breathing dragon deep in slumber. Behind the beast you see a portal that could lead you home. You try to sneak past the beast, but it awakes. Prepare for battle!
+exits
+You can go West 25
 
 Congratulations!!! You have completed the journey through my maze.
-
-

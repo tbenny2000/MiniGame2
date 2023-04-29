@@ -13,7 +13,7 @@ public class ExitsDB {
         SQLiteDB sdb = new SQLiteDB();
         Exits roomExits = new Exits();
         ArrayList<String> listOfExits = new ArrayList<>();
-        String sql = "Select * from Exits WHERE roomID = " + id;
+        String sql = "Select * FROM Exits WHERE roomID = " + id;
         ResultSet rs = sdb.queryDB(sql);
         while (rs.next()) {
             listOfExits.add(rs.getString("exitDirection"));
