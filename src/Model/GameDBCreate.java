@@ -19,24 +19,14 @@ public class GameDBCreate {
         this.dbName = dbName;
     }
 
-    /**
-     * Method: buildTables
-     * Purpose: Build all tables
-     *
-     * @return void
-     * @throws SQLException
-     */
+    // Method: buildTables
+    // Purpose: Build all tables
     public void buildTables() throws SQLException, ClassNotFoundException, GameException {
         buildRoom();
     }
 
-    /**
-     * Method: buildRoom
-     * Purpose: Build the Room table and load data
-     *
-     * @return void
-     * @throws SQLException
-     */
+    // Method: buildRoom
+    // Purpose: Build the Room table and load data
     public void buildRoom() throws SQLException, ClassNotFoundException, GameException {
         sdb = new SQLiteDB(dbName);
 

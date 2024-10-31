@@ -1,19 +1,20 @@
 package Model;
+
 import Controller.GameCharacter;
 import Controller.GameException;
+
 import java.util.ArrayList;
 
-/**Class: CharacterStore
- * This class – stores the information of the Game Characters enter by the user.
- */
 public class CharacterStore {
     private ArrayList<GameCharacter> characters;
     private static CharacterStore inst = null;
 
+    // Private constructor for Singleton pattern
     private CharacterStore() {
         characters = new ArrayList<>();
     }
 
+    // Singleton instance to ensure only one CharacterStore exists
     public static CharacterStore getInstance() {
         if (inst == null) {
             inst = new CharacterStore();
@@ -21,48 +22,41 @@ public class CharacterStore {
         return inst;
     }
 
-    /** Method: addCharacter
-     * Allows the user to add a character to the store.
-     * @param gc The GameCharacter to be added to the store.
-     * throws GameException if the character already exists
-     */
+    // Adds a character to the store if it doesn't already exist.
+    // gc The GameCharacter to add.
+    // @throws GameException if the character already exists.
     public void addCharacter(GameCharacter gc) throws GameException {
         checkUnique(gc.getName());
         characters.add(gc);
     }
 
-    /** Method: checkUnique
-     * Checks to determine if the character name is already used in the store.
-     * @param name The name of the GameCharacter to be added to the store.
-     * throws GameException if the character already exists
-     */
-    public void checkUnique(String name) throws GameException {
+    // Checks if a character name is unique within the store.
+    // name The name of the GameCharacter to check.
+    // @throws GameException if a character with the same name exists.
+    private void checkUnique(String name) throws GameException {
         for (GameCharacter gc : characters) {
             if (name.equalsIgnoreCase(gc.getName())) {
-                throw new GameException((name + " already exists."));
+                throw new GameException(name + " already exists.");
             }
         }
     }
 
-    /** Method: findCharacter
-     * Allows the user to find a character in the store.
-     * @param name The GameCharacter to be added to the store.
-     * throws GameException if the character is not found
-     */
+    // Finds and returns a character by name.
+    // name The name of the GameCharacter to find.
+    // @return The GameCharacter object if found.
+    // @throws GameException if the character is not found.
     public GameCharacter findCharacter(String name) throws GameException {
         for (GameCharacter gc : characters) {
             if (name.equalsIgnoreCase(gc.getName())) {
                 return gc;
             }
         }
-        throw new GameException(name + " not found");
+        throw new GameException(name + " not found.");
     }
 
-    /** Method: getCharacters
-     * Allows the user to retrieve all characters from the store.
-     * @return ArrayList<GameCharacter> the list of characters in the store
-     */
+    // Returns a list of all characters in the store.
+    // @return An ArrayList of GameCharacter objects.
     public ArrayList<GameCharacter> getCharacters() {
-        return characters;
+        return new ArrayList<>(characters); // Return a copy to protect internal data
     }
 }
